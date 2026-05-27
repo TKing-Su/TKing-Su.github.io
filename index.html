@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#0f766e" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="./" />
-  <title>苏子博 · 个人学术主页 | Zibo Su · Academic Homepage</title>
+  <title>苏子博 · 个人主页 | Zibo Su · Academic Homepage</title>
 
   <!-- Icons & Fonts -->
   <link rel="icon" type="image/x-icon" href="static/assets/optic.ico" />
@@ -137,10 +137,42 @@
     .kv i{margin-top:.2rem}
 
     .section{margin:18px 0 26px}
+    /* About section logos */
+    #about p, #about li{display:flex;align-items:center;flex-wrap:wrap;gap:.55rem}
+    .about-logo{
+      width:28px;height:28px;flex:0 0 28px;
+      object-fit:contain;border-radius:6px;
+      background:#fff;border:1px solid var(--border);
+      padding:2px;box-shadow:0 1px 3px rgba(0,0,0,.06);
+      vertical-align:middle;
+    }
+    [data-theme="dark"] .about-logo{background:#fff}
     .pub{margin: 10px 0;padding: 12px;border-left: 3px solid var(--primary);background: color-mix(in lab, var(--bg) 92%, var(--primary-weak) 8%);border-radius: 8px}
     .pub .title{font-weight:700}
     .pub .venue{font-style: italic;color:var(--muted)}
     .pub .links{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.35rem}
+    /* Publication framework figure */
+    .pub-figure{
+      margin:.6rem 0 .2rem;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,.05);
+      overflow:hidden;
+    }
+    .pub-figure img{
+      display:block;
+      width:100%;
+      height:auto;
+      max-height:420px;
+      object-fit:contain;
+      border-radius:6px;
+      cursor:zoom-in;
+      transition:transform .25s ease;
+    }
+    .pub-figure img:hover{transform:scale(1.01)}
+    [data-theme="dark"] .pub-figure{background:#0f1520}
     .tag{display:inline-flex;align-items:center;gap:.35rem;border:1px solid var(--border);font-size:.8rem;border-radius:999px;padding:.2rem .55rem;color:var(--muted)}
 
     /* Galleries */
@@ -183,8 +215,8 @@
       </div>
       <nav class="nav-links" id="site-nav">
         <a href="#about"><span class="lang-zh">关于我</span><span class="lang-en">About</span></a>
-        <a href="#research"><span class="lang-zh">研究方向</span><span class="lang-en">Research</span></a>
-        <a href="#publications"><span class="lang-zh">论文</span><span class="lang-en">Publications</span></a>
+        <a href="#interest"><span class="lang-zh">研究兴趣</span><span class="lang-en">Interests</span></a>
+        <a href="#research"><span class="lang-zh">学术研究</span><span class="lang-en">Research</span></a>
         <a href="#patents"><span class="lang-zh">专利/软著</span><span class="lang-en">Patents & Software</span></a>
         <a href="#awards"><span class="lang-zh">获奖</span><span class="lang-en">Awards</span></a>
         <a href="#contact"><span class="lang-zh">联系</span><span class="lang-en">Contact</span></a>
@@ -232,32 +264,41 @@
           <h2 class="lang-zh">关于我</h2>
           <h2 class="lang-en">About Me</h2>
           <div class="lang-zh">
-            <p><strong>硕士研究生</strong>（推免）：<strong>西安电子科技大学</strong> · 电子工程学院 · 电子科学与技术</p>
-            <p><strong>本科</strong>：<strong>武汉理工大学</strong> · 汽车工程学院 · 车辆工程（电子方向）</p>
+            <p><img class="about-logo" src="images/logo/whutlogo.jpeg" alt="武汉理工大学 logo"/><strong>本科</strong> · 武汉理工大学&nbsp;·&nbsp;2020.9 – 2024.6</p>
+            <p><img class="about-logo" src="images/logo/xidianlogo.jpg" alt="西安电子科技大学 logo"/><strong>硕士（保送）</strong> · 西安电子科技大学&nbsp;·&nbsp;2024.9 – 2027.6</p>
+            <p><img class="about-logo" src="images/logo/djilogo.jpg" alt="DJI 大疆 logo"/><strong>DJI 大疆</strong> · 影像部门图像算法实习生&nbsp;·&nbsp;2025.10 – 2026.4</p>
+            <p><img class="about-logo" src="images/logo/tencentlogo.jpg" alt="Tencent 腾讯 logo"/><strong>Tencent 腾讯</strong> · PCG 多模态视频技术实习生&nbsp;·&nbsp;2026.4 – 2026.9</p>
           </div>
           <div class="lang-en">
-            <p><strong>M.Eng. student</strong> (recommended admission) at <strong>Xidian University</strong>, School of Electronic Engineering, majoring in Electronic Science and Technology.</p>
-            <p><strong>B.Eng.</strong> in Vehicle Engineering (Electronics track) from <strong>Wuhan University of Technology</strong>, School of Automotive Engineering.</p>
+            <p><img class="about-logo" src="images/logo/whutlogo.jpeg" alt="WHUT logo"/><strong>B.Eng.</strong> · Wuhan University of Technology&nbsp;·&nbsp;Sept. 2020 – June 2024</p>
+            <p><img class="about-logo" src="images/logo/xidianlogo.jpg" alt="Xidian University logo"/><strong>M.Eng. (recommended admission)</strong> · Xidian University&nbsp;·&nbsp;Sept. 2024 – June 2027</p>
+            <p><img class="about-logo" src="images/logo/djilogo.jpg" alt="DJI logo"/><strong>DJI</strong> · Image Algorithm Intern, Imaging Dept.&nbsp;·&nbsp;Oct. 2025 – Apr. 2026</p>
+            <p><img class="about-logo" src="images/logo/tencentlogo.jpg" alt="Tencent logo"/><strong>Tencent</strong> · Multimodal Video Technology Intern, PCG&nbsp;·&nbsp;Apr. 2026 – Sept. 2026</p>
           </div>
         </section>
 
-        <!-- Research (placeholder keeps nav consistent even if empty for now) -->
-        <section id="research" class="card section" aria-labelledby="research-title">
-          <h2 id="research-title" class="lang-zh">研究方向</h2>
-          <h2 class="lang-en">Research Interests</h2>
-          <p class="lang-zh">计算机视觉：多模态生成 (语音驱动的人脸视频合成)，目标检测</p>
-          <p class="lang-en">Computer vision: Multimodal Generation (speech-driven talking face synthesis) and Object Detection.</p>
+        <!-- Interests -->
+        <section id="interest" class="card section" aria-labelledby="interest-title">
+          <h2 id="interest-title" class="lang-zh">研究方向</h2>
+          <h2 class="lang-en">Interests</h2>
+          <p class="lang-zh">计算机视觉：视频生成、视频插帧、低光照图像增强</p>
+          <p class="lang-en">Computer Vision: Video Generation, Video Frame Interpolation, Low-Light Image Enhancement</p>
         </section>        
 
 
-        <!-- Publications -->
-        <section id="publications" class="card section">
-          <h2 class="lang-zh">论文发表</h2>
-          <h2 class="lang-en">Publications</h2>
+        <!-- Research -->
+        <section id="research" class="card section">
+          <h2 class="lang-zh">学术研究</h2>
+          <h2 class="lang-en">Research</h2>
 
           <article class="pub">
             <div class="title">Outstanding Orthodontist: No More Artifactual Teeth in Talking Face</div>
             <div class="venue">IJCAI (CCF‑A), accepted. Acceptance rate 19.3%.</div>
+            <figure class="pub-figure">
+              <a href="images/framework/OrthoNet.png" target="_blank" rel="noopener">
+                <img src="images/framework/OrthoNet.png" alt="OrthoNet framework" loading="lazy"/>
+              </a>
+            </figure>
             <div class="links">
               <a class="tag" href="https://tking-su.github.io/OrthoNet-io/" target="_blank" rel="noopener"><i class="bi bi-window"></i> Project</a>
               <button class="tag" data-bib="ortho" type="button"><i class="bi bi-clipboard"></i> BibTeX</button>
@@ -267,6 +308,11 @@
           <article class="pub">
             <div class="title">RTPV‑YOLO: Real‑time Photovoltaic Detection with UAV‑based Thermal and RGB Imaging</div>
             <div class="venue">IEEE Transactions on Aerospace and Electronic Systems (IF 5.7; JCR Q1), accepted.</div>
+            <figure class="pub-figure">
+              <a href="images/framework/RTPV-YOLO.png" target="_blank" rel="noopener">
+                <img src="images/framework/RTPV-YOLO.png" alt="RTPV-YOLO framework" loading="lazy"/>
+              </a>
+            </figure>
             <div class="links">
               <a class="tag" href="https://github.com/TKing-Su/RTPV-YOLO" target="_blank" rel="noopener"><i class="bi bi-github"></i> GitHub</a>
               <button class="tag" data-bib="rtpv" type="button"><i class="bi bi-clipboard"></i> BibTeX</button>
@@ -275,8 +321,14 @@
 
           <article class="pub">
             <div class="title">A Bridge from Audio to Video: Phoneme‑Viseme Alignment Allows Every Face to Speak Multiple Languages</div>
-            <div class="venue">AAAI (CCF‑A), under review.</div>
+            <div class="venue">arXiv:2510.06612.</div>
+            <figure class="pub-figure">
+              <a href="images/framework/MuEx.png" target="_blank" rel="noopener">
+                <img src="images/framework/MuEx.png" alt="MuEx (Phoneme-Viseme Alignment) framework" loading="lazy"/>
+              </a>
+            </figure>
             <div class="links">
+              <a class="tag" href="https://anonymous.4open.science/r/ACM_MM_Supplemental_Materials-D92F" target="_blank" rel="noopener"><i class="bi bi-window"></i> Project</a>
               <button class="tag" data-bib="pva" type="button"><i class="bi bi-clipboard"></i> BibTeX</button>
             </div>
           </article>
@@ -302,9 +354,9 @@
           <div class="lang-zh"><ul>
             <li>CN114655361A 智能浮标、海上巡航的无人机集群化控制管理系统和方法（已授权，学生一作）</li>
             <li>CN117391543B 轨迹数据生成的海上航路网络质量评价方法及系统（已授权，四作）</li>
+            <li>CN120746853A 语音驱动人脸视频生成的牙齿区域增强方法及装置（公开实审中，学生一作）</li>
             <li>CN116797206A 基于无人机的光伏巡检清洁方法和系统（公开实审中，学生一作）</li>
             <li>CN119083395A 河流内垃圾与油污的回收系统（公开实审中，学生一作）</li>
-            <li>202510802515.1 语音驱动人脸视频生成的牙齿区域增强方法及装置（受理中，学生一作）</li>
             <li>软件著作：无人机最优路径规划、燃烧传热模型求解、无人机‑艇协同水质检测可视化、光伏巡检数据可视化、数字人三维面部重建、多语言多模态数字人视频生成、条件扩散模型 AI 换装等。</li>
           </ul>
           </div>
@@ -313,9 +365,9 @@
             <ul>
               <li>CN114655361A Intelligent buoy and UAV swarm control & management system for maritime patrol (granted, student first author).</li>
               <li>CN117391543B Method and system for evaluating quality of maritime route networks from trajectory data (granted, 4th author).</li>
+              <li>CN120746853A Teeth-region enhancement method and device for speech-driven talking head generation (application filed, student first author).</li>
               <li>CN116797206A UAV-based photovoltaic inspection and cleaning method and system (under substantive examination, student first author).</li>
               <li>CN119083395A River trash and oil recovery system (under substantive examination, student first author).</li>
-              <li>202510802515.1 Teeth-region enhancement method and device for speech-driven talking head generation (application filed, student first author).</li>
               <li>Software copyrights: UAV optimal path planning; combustion heat-transfer solver; UAV–boat collaborative water quality visualization; PV inspection data visualization; 3D facial reconstruction for digital humans; multilingual multimodal digital human video generation; conditional-diffusion-based AI outfit transfer, etc.</li>
             </ul>
           </div>
@@ -394,7 +446,10 @@
           <ul class="list-unstyled">
             <li class="kv"><i class="bi bi-envelope"></i> <a href="mailto:tk1076435968@gmail.com">tk1076435968@gmail.com</a> / <a href="mailto:tkingsu@foxmail.com">tkingsu@foxmail.com</a></li>
             <li class="kv"><i class="bi bi-telephone"></i> +86‑19995410862</li>
-            <li class="kv"><i class="bi bi-geo-alt"></i> 陕西省西安市雁塔区 · 西安电子科技大学</li>
+            <li class="kv"><i class="bi bi-geo-alt"></i>
+              <span class="lang-zh">陕西省西安市雁塔区 · 西安电子科技大学</span>
+              <span class="lang-en">Yanta District, Xi'an, Shaanxi · Xidian University</span>
+            </li>
             <li class="kv"><i class="bi bi-github"></i> <a href="https://github.com/TKing-Su" target="_blank" rel="noopener">@TKing‑Su</a></li>
           </ul>
         </section>
@@ -487,10 +542,10 @@
   journal={IEEE Transactions on Aerospace and Electronic Systems},
   year={2025}
 }`,
-      pva: `@inproceedings{su2025pva,
+      pva: `@article{su2025pva,
   title={A Bridge from Audio to Video: Phoneme-Viseme Alignment Allows Every Face to Speak Multiple Languages},
   author={Su, Zibo and Others},
-  booktitle={AAAI},
+  journal={arXiv preprint arXiv:2510.06612},
   year={2025}
 }`
     };
